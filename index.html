@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>د. محمد كعيب | أخصائي جلدية وتجميل</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="main-container">
+    <header>
+        <h1>د. محمد كعيب</h1>
+        <p class="doc-specialty">أخصائي أمراض الجلدية والتجميل والليزر</p>
+        <a href="tel:0944717217" class="phone-link">
+            <i class="fas fa-phone"></i> 0944717217
+        </a>
+    </header>
+
+    <div class="doctor-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1588776814546-cc3b7b40c64f?w=500" alt="الدكتور محمد كعيب">
+    </div>
+
+    <div class="work-card">
+        <div class="work-item">
+            <i class="fas fa-hospital"></i>
+            <span><b>مصحة درب الربيع:</b><br>3:00م - 6:00م (يومياً عدا الاثنين)</span>
+        </div>
+        <div class="work-item" style="margin-top: 10px;">
+            <i class="fas fa-clinic-medical"></i>
+            <span><b>مصحة بيراي كلينك:</b><br>9:30م - 1:00ص (سبت، اثنين، خميس)</span>
+        </div>
+    </div>
+
+    <button class="btn-start" onclick="toggleServices(true)">ابدأ الحجز الآن</button>
+</div>
+
+<div class="services-overlay" id="servicesPage">
+    <div class="back-btn" onclick="toggleServices(false)">← الرجوع</div>
+    <h3 style="margin-bottom: 25px; text-align: center; width: 100%;">اختر نوع الخدمة</h3>
+    
+    <div class="services-container">
+        <div class="service-option" onclick="openForm('كشف طبي جديد')">
+            <span>كشف طبي جديد</span>
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        
+        <div class="service-option follow-up" onclick="openForm('متابعة دورية')">
+            <div class="main-text">
+                <span>متابعة دورية</span>
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="sub-text">
+                <i class="fas fa-clock" style="margin-left: 5px;"></i>
+                المتابعة من أسبوعين إلى 6 أشهر من تاريخ الكشف
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="bookingModal">
+    <div class="modal-body">
+        <h3 style="text-align: center; margin-top: 0; color: #203a43;">إتمام البيانات</h3>
+        
+        <div class="input-box">
+            <label><i class="fas fa-user-edit"></i> اسم المريض</label>
+            <input type="text" id="pName" placeholder="الاسم ثلاثي...">
+        </div>
+
+        <div class="input-box">
+            <label><i class="fas fa-map-location-dot"></i> المصحة المطلوبة</label>
+            <select id="pClinic">
+                <option value="مصحة درب الربيع">مصحة درب الربيع</option>
+                <option value="مصحة بيراي كلينك">مصحة بيراي كلينك</option>
+            </select>
+        </div>
+
+        <div class="input-box">
+            <label><i class="fas fa-stethoscope"></i> نوع الخدمة</label>
+            <input type="text" id="pService" readonly style="background: #f0f0f0; color: #666;">
+        </div>
+
+        <div class="input-box">
+            <label><i class="fas fa-calendar-check"></i> التاريخ المفضل</label>
+            <input type="date" id="pDate">
+        </div>
+
+        <div class="input-box">
+            <label><i class="fas fa-comment-dots"></i> ملاحظات إضافية</label>
+            <input type="text" id="pNotes" placeholder="اختياري...">
+        </div>
+
+        <button class="confirm-btn" onclick="sendToWhatsapp()">
+            <i class="fab fa-whatsapp"></i> تأكيد وإرسال عبر واتساب
+        </button>
+        <div class="cancel-btn" onclick="closeModal()">إلغاء الطلب</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
